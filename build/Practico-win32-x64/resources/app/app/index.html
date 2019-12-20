@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css" />
+        <title>forAll</title>
+    </head>
+    <body>
+        <div id="electron-titlebar">
+            <div style="float: right; margin:2%">
+                <div id="minimize" style="float: left;margin-right: 8px;"></div>
+                <div id="close" style="float: left;margin-right: 8px;"></div>
+            </div>
+            <div id="title" style="float: left;">Practico</div>
+        </div>
+        <div id="container">
+            <img class="img" src="../icons/practico.gif" />
+        </div>
+        <script>
+            const { remote } = require('electron');
+
+            const minimize = document.getElementById('minimize');
+            const close = document.getElementById('close');
+
+            minimize.addEventListener('click', () => {
+                remote.BrowserWindow.getFocusedWindow().minimize();
+            });
+
+            close.addEventListener('click', () => {
+                remote.BrowserWindow.getFocusedWindow().close();
+            });
+        </script>
+    </body>
+</html>

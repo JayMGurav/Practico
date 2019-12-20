@@ -1,0 +1,60 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#electron-titlebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0% 1%;
+}
+#title {
+    padding: 2%;
+    color: #000;
+}
+#close {
+    width: 25px;
+    height: 25px;
+    background-image: url('../icons/close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#minimize {
+    width: 25px;
+    height: 25px;
+    background-image: url('../icons/minimize.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#electron-titlebar #close #minimize {
+    float: right;
+}
+#container {
+    width: 100%;
+    height: 85%;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
